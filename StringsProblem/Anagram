@@ -1,0 +1,52 @@
+import java.util.Arrays;
+
+
+public class Anagram {
+    public static boolean scramble(String a, String b) {
+
+        boolean scramble = false;
+        int l1 = a.length();
+        int l2 = b.length();
+
+
+        if (l1 <= 50) {
+            if (l1 == l2) {
+
+                char[] chars1 = a.toLowerCase().toCharArray();
+                char[] chars2 = b.toLowerCase().toCharArray();
+                Arrays.sort(chars1);
+                Arrays.sort(chars2);
+                String ns1 = new String(chars1);
+                String ns2 = new String(chars2);
+                if (ns1.equals(ns2)) {
+                    scramble = true;
+                }
+            }
+        }
+        return scramble;
+    }
+
+
+    public static void main(String str[]){
+        boolean matches= Scrambies.scramble("rkqodlw","world");
+        System.out.print("matched +"+matches);
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("cedewaraaossoqqyt","codewars"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("katas","steak"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("scriptjavx","javascript"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("scriptingjava","javascript"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("scriptsjava","javascripts"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("javscripts","javascript"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("aabbcamaomsccdd","commas"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("commas","commas"));
+        System.out.print("\n");
+        System.out.print(Scrambies.scramble("sammoc","commas"));
+
+    }
