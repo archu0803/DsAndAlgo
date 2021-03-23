@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Palindrome {
+public static void main(String ar[]) {
+  Scanner scanner = new Scanner(System.in);
+  // findPalindrome(scanner.nextLine());       
+  //findPalindrome_simple(scanner.nextLine());
+  //        if (isPalindrome(scanner.nextLine())){
+  //            System.out.println("palindrome");
+  //        } else {
+  //            System.out.println("Not palindrome");
+  //}
+  if (isRotationOfPalindrome(scanner.nextLine())){
+  System.out.println("palindrome");
+  } else {
+  System.out.println("Not palindrome");
+  }
+  }
+private static void findPalindrome(String str) {
+    if (str != null && !str.isEmpty())
+    {
+      StringBuilder reverse = new StringBuilder();
+      reverse.append(str);
+      String rev = reverse.reverse().toString();
+      if (rev.equalsIgnoreCase(str)) {
+        System.out.println("palindrome");
+        } else {
+        System.out.println("Not palindrome");
+        }
+    }
+}
+}
