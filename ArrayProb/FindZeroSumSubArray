@@ -14,7 +14,7 @@ public class FindZeroSumSubArray {
         for (int i : arr) {
             sum += i;
             subArrayLength++;
-            if (set.contains(i)) {
+            if (set.contains(sum)) {
 
                 return true;
             }
